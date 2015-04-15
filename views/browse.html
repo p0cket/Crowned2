@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row">
+
+			<div class="col-md-8">
+				<h1>Pocket Silbermintz!</h1>
+				<p>Builder of awesome things. Known for creating the universe, and early adopting it.</p></br>
+
+				<button onclick="location.href = 'https://docs.google.com/forms/d/1P6kXsEQLsCQT8fCEhga2lbB-t4kpq80uJTJwzt6azEY/viewform?usp=send_form';" id="myButton" class="btn btn-default" >Buy His Book</button>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/v/t1.0-9/1452333_10153401965635453_1461688699_n.jpg?oh=6da22fff2d87cab27ea38b59ee423e51&oe=55AEDC09&__gda__=1433836607_6e5678cd90ae649cecef712f4341b4ce">
+				</div>
+			</div>
+
+		<div class="col-md-offset-2 col-md-8">
+			<div class="list-group">
+
+					<!-- SEARCH TOOL -->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							</div>
+				      		<input type="text" ng-model="searchTask" class="form-control" placeholder="Search">
+				    	</div>
+					</div>
+
+					<!-- TASK LIST -->
+					<a ng-repeat="task in tasks | filter: searchTask | orderBy: 'title'" ng-href="#/edit/{{task.$id}}">
+						<div class="list-group-item">
+					        <div class="row-content">
+					            <h4 class="list-group-item-heading">{{task.title}}</h4>
+					            <span class="list-group-item-text">
+					            	{{task.description}}
+					            </span>
+					        </div>
+					        <div class="payment">
+					        	<div>1</div>
+					        	<!-- <span class="label status {{task.status}}">{{task.status}}</span> -->
+					        </div>
+					    </div>
+				    	<div class="list-group-separator"></div>
+			    	</a>
+			</div>
+
+		</div>
+
+	</div>
+</div>
