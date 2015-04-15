@@ -3,7 +3,7 @@
 		<h1>Pocket Silbermintz!</h1>
 		<p>Builder of awesome things. Known for creating the universe, and early adopting it.</p><br>
 
-		<button onclick="location.href = 'https://docs.google.com/forms/d/1P6kXsEQLsCQT8fCEhga2lbB-t4kpq80uJTJwzt6azEY/viewform?usp=send_form';" id="myButton" class="btn btn-default" >Buy His Book</button>
+		<button onclick="location.href = 'https://docs.google.com/forms/d/1P6kXsEQLsCQT8fCEhga2lbB-t4kpq80uJTJwzt6azEY/viewform?usp=send_form';" id="myButton" class="btn btn-warning" >Buy His Book</button>
 	</div>
 	<div class="col-md-4">
 		<div class="thumbnail">
@@ -31,7 +31,7 @@
 				            <img class="circle" ng-src="{{task.gravatar}}">
 				        </div>
 				        <div class="row-content">
-				            <h4 class="list-group-item-heading">{{task.title | limitTo:25}}{{ task.title.length > 25? "..." : ""}}</h4>
+				            <h4 class="list-group-item-heading">{{task.title | limitTo:60}}{{ task.title.length > 60? "..." : ""}}</h4>
 				            <span class="list-group-item-text">
 				            	<span am-time-ago="task.datetime"></span>
 				            </span>
@@ -76,9 +76,9 @@
 							    <a href="" class="btn btn-warning">Admin</a>
 							    <a href="" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 							    <ul class="dropdown-menu">
-							        <li><a href="" data-toggle="modal" data-target="#ediModal">EDIT TASK</a></li>
+							        <li><a href="" data-toggle="modal" data-target="#ediModal">EDIT POST</a></li>
 							        <li class="divider"></li>
-							        <li><a href="" ng-click="cancelTask(selectedTask.$id)">CANCEL TASK</a></li>
+							        <li><a href="" ng-click="cancelTask(selectedTask.$id)">CANCEL POST</a></li>
 							    </ul>
 							</div>
 						</div>
